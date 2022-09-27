@@ -1,0 +1,6 @@
+<%= form_with url: post_comments_path(@post.id), scope: :comment do |form| %>
+  <div class="comment_form">
+    <%= form.text_area :text, id:"styled", class:"comment_form", placeholder: "Comment here..." %>
+    <%= form.submit "Add comment", class:"add_comment_btn" %>
+  </div>
+<% end %>
