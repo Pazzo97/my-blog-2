@@ -13,3 +13,395 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: lightgrey;
+}
+
+main > * {
+  margin: 0 auto;
+}
+
+.app_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sign_up_box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  border: 5px solid #000;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.sign_up_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login_box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  border: 5px solid #000;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input_field {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.submit_button {
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 25px;
+  box-shadow: 5px 5px;
+}
+
+.shared_links {
+  margin: 25px auto;
+  width: 82%;
+  margin-top: 25px;
+}
+
+.shared_links > * {
+  font-size: 18px;
+}
+
+.user_page {
+  margin: 30px 0;
+}
+
+.welcome_user {
+  margin: 30px auto;
+  width: 80%;
+}
+
+.logout_user_btn {
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  height: 30px;
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.user_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 40px;
+  width: 80%;
+}
+
+.user_photo > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user_name {
+  display: flex;
+  padding: 10px;
+  border: 3px solid #000;
+  flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+.user_name > h2 {
+  text-align: left;
+}
+
+.user_name > h4 {
+  text-align: right;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.user_details_show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 40px;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.user_posts_index > * {
+  padding: 10px;
+}
+
+.user_details_show > *:not(:last-child) {
+  border: 3px solid #000;
+  padding: 10px;
+}
+
+.user_details_show > *:last-child {
+  text-align: center;
+  border: 3px solid #000;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  box-shadow: 5px 5px;
+}
+
+.see_all_posts_btn {
+  color: #000;
+  font-size: 18px;
+}
+
+.user_posts_index {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 45px auto;
+  width: 80%;
+}
+
+.post_title > h3 > a {
+  font-size: 22px;
+  color: rgb(36, 153, 231);
+}
+
+.user_posts > h4 {
+  text-align: end;
+}
+
+.post_title {
+  border: 3px solid #000;
+}
+
+.post_title > h4 {
+  text-align: end;
+}
+
+.post_comments {
+  border: 3px solid #000;
+}
+
+.back_button {
+  margin: 25px auto;
+  text-align: center;
+}
+
+.go_back_button {
+  border: 3px solid #000;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  box-shadow: 5px 5px;
+  font-size: 18px;
+  color: #000;
+}
+
+.post_details {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.post_title_interactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Post_title_header {
+  font-size: 25px;
+}
+
+.delete_post_btn {
+  text-align: end;
+}
+
+.btn_delete_post {
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  height: 30px;
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.post_text_show {
+  font-size: 20px;
+}
+
+.post_like {
+  margin: 15px 0;
+}
+
+.btn_like_post {
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  height: 30px;
+  cursor: pointer;
+  background-color: blue;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+textarea#styled {
+  width: 600px;
+  height: 120px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.add_comment_btn {
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(80, 77, 77);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.delete_comment_btn {
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  height: 30px;
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.user_new_post_form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.new_post_btn {
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(36, 153, 231);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.back_posts_btn {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.back_to_posts_btn {
+  border: 3px solid #000;
+  padding: 10px;
+  box-shadow: 5px 5px;
+  font-size: 18px;
+  color: #000;
+  margin-top: 30px;
+}
+
+.new_post_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+#post_title {
+  width: 600px;
+  height: 20px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+textarea#post_text {
+  width: 600px;
+  height: 120px;
+  border: 3px solid #ccc;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.back_btn {
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(36, 153, 231);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.submit_post_btn {
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(36, 153, 231);
+  color: #fff;
+  border-radius: 5px;
+}

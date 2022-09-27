@@ -1,0 +1,53 @@
+<main>
+  <% if @post.present? %>
+    <div class="user_post_show">
+      <div class="post_details">
+        <%= link_to 'Back', user_posts_path, class:"btn_back" %>
+        <div class="post_title_interactions">
+          <div class="post_title_show">
+            <h3 class="Post_title_header"><%= @post.title %> , by <%= @user.name %></h3>
+          </div>
+          <div class="post_comments_show">
+            <h4><span>Comment <%= @post.comments_count %></span> <span>|</span> <span>Likes <%= @post.likes_count %></span></h4>
+            <% if can? :destroy, @post %>
+              <div class="delete_post_btn">
+                <%= button_to "Delete", { action: :destroy, id: @post.id }, method: :delete, class: "btn_delete_post"  %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="post_text_show">
+          <p><%= @post.text %></p>
+        </div>
+        <hr>
+        <div class="post_like">
+          <%= render "posts/like_form" %>
+        </div>
+        <div class="post_comments_form">
+          <%= render "posts/comment_form" %>
+        </div>
+        <div class="user_comments">
+          <h4><u>Comments:</u></h4>
+          <% if @comments.length == 0 %>
+            <p>No comments for now. Be the first to comment</p>
+          <% else %>
+            <% @comments.each do |comment| %>
+              <div class="user_comment_element">
+                <p><strong><%= comment.author.name%>:</strong> <%= comment.text%></p>
+                <% if can? :destroy, comment %>
+                  <%= button_to "Delete Comment", post_comment_path(post_id: @post.id, comment_id: comment.id), method: :delete, data: { turbo: false }, class: "delete_comment_btn"  %>
+                <% end %>
+              </div>
+            <%end%>
+          <% end %>
+        </div>
+      </div>
+      <div class="back_posts_btn">
+        <%= link_to "Back to posts", user_posts_path(@user), class: "back_to_posts_btn" %>
+      </div>
+    </div>
+  <% else %>
+    <p>There is no posts to show</p>
+  <% end %>
+</main>
